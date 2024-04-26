@@ -4,8 +4,7 @@ import logo from '../Images/cN1g46Vw_400x400.png'
 import { IoSearchOutline } from "react-icons/io5";
 import { RxSlash } from "react-icons/rx";
 import { Link } from 'react-router-dom';
-import Product from '../Product'
-import { IoIosArrowForward , IoIosArrowDown} from "react-icons/io";
+import { IoIosArrowDown} from "react-icons/io"
 import FashionImage from '../FashionImage/FashionImage';
 import Footer from '../Footer/Footer';
 
@@ -22,7 +21,7 @@ const Fashion = () => {
 
                             <div className='mx-10 h-12 relative flex items-center focus-within:text-black '>
                             <IoSearchOutline  className='absolute ml-4 pointer-events-none'/>
-                                <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32 hover:px-36' placeholder='Search for any Product'/>
+                                <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32  outline-none' placeholder='Search for any Product'/>
                             </div>  
 
                         </div>
@@ -49,7 +48,7 @@ const Fashion = () => {
         </div>
         <div className='flex ml-24'>
             <div>
-                <a href="">Home</a>
+                <h2>Home</h2>
             </div>
             <div className=''>
                 <span className='inline-block'><RxSlash /></span>
@@ -72,7 +71,7 @@ const Fashion = () => {
 
         <div className='grid grid-cols-[20%,80%] mx-20'>
             <div className=''>
-                <div className='border-1 border-gray rounded-xl'>
+                <div className='border-1 border-gray rounded-md'>
                     <div className='flex items-center justify-between py-4 border-b border-gray w-full p-2'>
                         <div>
                             <h2>Categories</h2>   
@@ -134,7 +133,7 @@ const Fashion = () => {
                     
 
                 </div>
-                <div className='border-1 border-gray rounded-xl mt-4 '>
+                <div className='border-1 border-gray rounded-md mt-4 '>
                     <div className='flex items-center justify-between py-4 border-b border-gray w-full p-2  '>
                         <div>
                             <h2>Sub-Categories</h2>   

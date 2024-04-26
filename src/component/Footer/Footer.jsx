@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div>
 
-        <div className='py-24'>
+        <div className='pt-32 pb-16 '>
 
             <div className='px-24 flex justify-center'>
                 <img src={logo} alt="" className='w-10 inline-block'/><h2 className='inline-block text-2xl font-bold'>Quick<span className='text-red'>Shop</span></h2>
@@ -26,7 +26,7 @@ const Footer = () => {
 
 
 
-            <div className='flex justify-center'>
+            <div className='flex justify-center cursor-pointer'>
                 <h2 className='bg-orange-50 p-3 rounded-full mx-4'><FaFacebookSquare className='text-red ' /></h2>
                 <h2 className='bg-orange-50 p-3 rounded-full mx-4'><IoLogoTwitter className='text-red' /></h2>
                 <h2 className='bg-orange-50 p-3 rounded-full mx-4'><RiInstagramFill className='text-red' /></h2>

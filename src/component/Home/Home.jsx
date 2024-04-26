@@ -36,13 +36,6 @@ const Home = () => {
         setShowData(true)
     }
     
-    // const navigate = useNavigate()
-    const merchant = [
-        {
-            image:''
-            
-        }
-    ]
     
   return (
     

@@ -23,7 +23,7 @@ const MarketPlace = () => {
 
                         <div className='mx-10 h-12 relative flex items-center focus-within:text-black '>
                         <IoSearchOutline  className='absolute ml-4 pointer-events-none'/>
-                            <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32 hover:transition' placeholder='Search for any Product'/>
+                            <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32 outline-none transition duration-500 ease-in-out' placeholder='Search for any Product'  spa/>
                         </div>  
 
                     </div>
