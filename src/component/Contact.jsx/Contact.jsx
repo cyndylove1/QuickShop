@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
+import Subscribe from '../Subscribe/Subscribe'
 
 const Contact = () => {
   return (
@@ -47,7 +49,8 @@ const Contact = () => {
                 </form>
 
             </div>
-            
+            <Subscribe/>
+            <Footer/>
         </div>
     </div>
   )

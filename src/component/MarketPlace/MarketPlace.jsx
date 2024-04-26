@@ -7,7 +7,9 @@ import shoe from '../Images/pexels-bhine-4314204.jpg'
 import heels from '../Images/pexels-gabby-k-7691385.jpg'
 import gifted from '../Images/gifted bags.png'
 import { IoIosArrowForward } from "react-icons/io";
-import Product from '../FeaturedProduct';
+import Product from '../Product';
+import Subscribe from '../Subscribe/Subscribe'
+import Footer from '../Footer/Footer';
 
 const MarketPlace = () => {
   return (
@@ -21,7 +23,7 @@ const MarketPlace = () => {
 
                         <div className='mx-10 h-12 relative flex items-center focus-within:text-black '>
                         <IoSearchOutline  className='absolute ml-4 pointer-events-none'/>
-                            <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32 hover:px-36' placeholder='Search for any Product'/>
+                            <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32 hover:transition' placeholder='Search for any Product'/>
                         </div>  
 
                     </div>
@@ -46,7 +48,6 @@ const MarketPlace = () => {
         </div>
         <div className='flex justify-evenly mx-20'>
             
-                
                 <div className=' w-60 h-78 relative'>
                     <div className='bg-black/40 w-100 h-77 rounded-2xl'>
                         <img src={heel}alt="" className='w-100 h-77 mix-blend-overlay absolute rounded-2xl' />
@@ -123,6 +124,8 @@ const MarketPlace = () => {
             
         </div>
         <Product title='More Product'/>
+        <Subscribe/>
+        <Footer/>
     </div>
   )
 }

@@ -54,7 +54,7 @@ const FeaturedProduct = ({title}) => {
         
     <div className='mt-32 '>
         <div className='fonts-sans pb-10 pl-24 mt-48 text-4xl font-medium'>
-            <h2 className='text-xl'>Featured Product</h2>
+            <h2 className='text-xl'>{title='Featured Product'}</h2>
         </div>
         <div className='mx-16 flex grid items-center grid-cols-4'>
             {

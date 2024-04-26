@@ -8,6 +8,8 @@ import { AiOutlineInbox } from "react-icons/ai";
 import { LuGanttChartSquare } from "react-icons/lu";
 import { IoIosArrowForward , IoIosArrowDown} from "react-icons/io";
 import shape3 from '../Images/Colorful Shape 3 - Boost your Sales (1).png'
+import Footer from '../Footer/Footer';
+import Subscribe from '../Subscribe/Subscribe'
 
 const Merchant = () => {
     const [showAccordion, setShowAccordion] = useState(false); 
@@ -183,62 +185,67 @@ const Merchant = () => {
                     <h2 className='text-3xl font-medium'>Some <span className='text-red'>top questions</span> <br />Merchants ask.</h2>
                     <p>We have answered this question for you.</p>
                 </div>
-                    <div>
+                    
+                    
+                    
+                <div>
+                    {
+                     accordion.map((items)=>{
+                        return(
 
-
-                            {
-                                accordion.map((items)=>{
-                                    return(
-
-                                        <div className=''>
-                                            <div className=''>
-                                                <div>
-                                                    <div className=' mt-10' onClick={HandleAccordion}>
-                                                        <div className=' flex items-center justify-between pt-4' >
-                                                            <h2 className='inline-block'>{items.title}</h2>
-                                                            {showAccordion ? (
-                                                                <h2 className="text-sm  mx-48 "><IoIosArrowForward /></h2>
+                            <div className=''>
+                                <div className=''>
+                                    <div>
+                                        <div className=' mt-10' onClick={HandleAccordion}>
+                                            <div className=' flex items-center justify-between pt-4' >
+                                                <h2 className='inline-block'>{items.title}</h2>
+                                                    {showAccordion ? (
+                                                         <h2 className="text-sm  mx-48 "><IoIosArrowForward /></h2>
                                                                  
-                                                            ):(
-                                                                <h2 className="text-sm  mx-48 "><IoIosArrowDown /></h2> 
-
-                                                            )}
-                                                            
-
-                                                        </div>
-                                                        
-
-                                                    </div>
-                                                    {showAccordion && (
-                                                        <div className='py-4'>
-                                                            <h2 className=''>{items.description}</h2>
-                                                        
-                                                        </div>
+                                                        ):(
+                                                        <h2 className="text-sm  mx-48 "><IoIosArrowDown /></h2> 
 
                                                     )}
+                                                            
 
-                                                    <div className='border-b-1 border-gray py-4 w-60'></div>
+                                            </div>
+                                                        
 
-                                                </div>
+                                        </div>
+                                        {showAccordion && (
+                                            <div className='py-4'>
+                                                <h2 className=''>{items.description}</h2>
+                                                        
+                                            </div>
+
+                                        )}
+
+                                        <div className='border-b-1 border-gray py-4 w-60'></div>
+
+                                    </div>
                                                
                                                 
 
-                                            </div>
-                                        </div>
+                                </div>
+                            </div>
 
 
-                                    )
+                        )
                                     
 
-                                })
-                            }
+                                
+                    })
+                }
 
-                    </div>
+            </div>
                         
                            
                                 
                                 
                                 
+
+
+                            
                                 
                             
                         
@@ -246,6 +253,8 @@ const Merchant = () => {
             </div>
             
         </div>
+        <Subscribe/>
+        <Footer/>
     </div>
   )
 }

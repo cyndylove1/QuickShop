@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
+import Subscribe from '../Subscribe/Subscribe'
 
 const quickImage =[
     {
@@ -69,6 +71,8 @@ const Blog = () => {
                 </div>
             </div>
         </div>
+        <Subscribe/>
+        <Footer/>
     </div>
   )
 }
