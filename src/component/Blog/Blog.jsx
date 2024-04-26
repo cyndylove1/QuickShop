@@ -55,7 +55,7 @@ const Blog = () => {
                                     <img src={product.images}alt=""  className='h-14 w-full rounded-2xl' />
                                 </div>
                                 <div>
-                                    <h2 className='pt-10'>{product.title}</h2>
+                                    <b className='pt-10'>{product.title}</b>
                                     <p className='pb-4'>{product.description}</p>
                                 </div>
 
