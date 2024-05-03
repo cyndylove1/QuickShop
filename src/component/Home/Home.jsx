@@ -43,7 +43,7 @@ const Home = () => {
         <div className='bg-amber h-98'>
             <Navbar/>
             
-            <div className='flex justify-between mx-20 h-98 pt-10 '>
+            <div className='flex justify-between mx-20 h-98 '>
                 <div className='py-32'>
                     <h2 className='text-5xl font-medium'>Make<span className='text-red'> extra money <br /></span> on Quickshop</h2>
                     <h6 className='py-6 font-thin'>Sell your products globally with the click of a button.</h6>
@@ -58,7 +58,7 @@ const Home = () => {
 
 
                 </div>
-                <div className='w-99 h-78 py-24 rounded relative'>
+                <div className='w-99 h-78 py-10 rounded relative'>
                     <div className='relative'>
                         <div className='relative ml-10'>
                             <img src={hero} alt="" className='h-78  rounded-2xl ml-10' />

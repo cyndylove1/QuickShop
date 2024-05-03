@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import merchant from '../Images/istockphoto-1193229448-612x612 (1).jpg'
 import Navbar from '../Navbar/Navbar'
-import video from '../../assets/Dropbox_Homepage.mp4'
+import video from '../../Assets/Dropbox_Homepage.mp4'
 import { BiStoreAlt } from "react-icons/bi";
 import { IoBagOutline } from "react-icons/io5";
 import { AiOutlineInbox } from "react-icons/ai";
@@ -42,7 +42,7 @@ const Merchant = () => {
             <div className='bg-amber h-98'>
                 <Navbar/>
                 
-                <div className='flex justify-between mx-20 h-98 pt-16'>
+                <div className='flex justify-between mx-20 h-98 '>
                     <div className='py-32'>
                         <h2 className='text-5xl font-medium'><span className='text-red'> 2000+ </span> businesses <br /> trust QuickShop</h2>
                         <h6 className='py-6 font-thin'>Set up your store in less than 5 minutes.</h6>
@@ -57,7 +57,7 @@ const Merchant = () => {
 
 
                     </div>
-                    <div className='w-99 h-78 py-24 rounded'>
+                    <div className='w-99 h-78 py-10 rounded'>
                         <div>
                             <img src={merchant} alt="" className='h-78  rounded-2xl' />
 

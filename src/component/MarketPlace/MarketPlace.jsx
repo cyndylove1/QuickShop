@@ -10,45 +10,91 @@ import { IoIosArrowForward } from "react-icons/io";
 import Product from '../Product';
 import Subscribe from '../Subscribe/Subscribe'
 import Footer from '../Footer/Footer';
+import { RxSlash } from "react-icons/rx";
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import images from "../Images/images.jpeg"
+
+
+// import product from '../Product'
 
 const MarketPlace = () => {
+const [hidden, setHidden] = useState("block");
+  const [query, setQuery] = useState("");
+    const handleSearch = (e) => {
+        setQuery(e.target.value);
+    
+        if (e.target.value.length > 0) {
+          setHidden("hidden");
+        } else {
+          setHidden("block");
+        }
+      };
   return (
     <div className=''>
         <div className=''>
-            <div className='flex justify-between items-center justify-center mx-20 my-10'>
-
-                <div className=''>
-                    <div className='flex items-center '>
-                        <img src={logo} alt="" className='w-10 inline-block'/><h2 className='inline-block text-2xl font-bold'>Quick<span className='text-red'>Shop</span></h2>
-
-                        <div className='mx-10 h-12 relative flex items-center focus-within:text-black '>
-                        <IoSearchOutline  className='absolute ml-4 pointer-events-none'/>
-                            <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32 outline-none transition duration-500 ease-in-out' placeholder='Search for any Product'  spa/>
-                        </div>  
-
-                    </div>
-                            
-                </div>
+            <div className='flex mx-20 mt-6 '>
                 <div>
-                    <div className='flex items-center'>
-                        <button className='bg-orange-100 text-red font-medium py-2 px-6 rounded-md'>Sell on QuickStore for free</button>
-                        <div className='ml-6'> 
-                            <h2><span><CiShoppingCart className='inline-block mr-4' /></span>Cart <span className='text-red'>(0)</span></h2>
-                        </div>
+                    <h2>Home</h2>
+                </div>
+                <div className='flex items-center'>
+                    <span className='inline-block'><RxSlash /></span>
+                    <div className='hover:text-red inline-block'>
+                        <Link to='/Merchant'>Merchant</Link>
 
                     </div>
-                    
                 </div>
-                
 
             </div>
-            
+        </div>
         
+        <div>
+            <div>
+                <div>
+                    <div className=''>
+                        <div className='flex justify-between items-center justify-center mx-20 my-6'>
+
+                            <div className=''>
+                                <div className='flex items-center '>
+                                    <img src={logo} alt="" className='w-10 inline-block'/><h2 className='inline-block text-2xl font-bold'>Quick<span className='text-red'>Shop</span></h2>
+
+                                    <div className='mx-10 h-12 relative flex items-center focus-within:text-black '>
+                                        <IoSearchOutline  className='absolute ml-4 pointer-events-none'/>
+                                        <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32  outline-none' placeholder='Search for any Product' onChange={(e)=> handleSearch(e)} />
+                                    
+                               
+                                     </div>  
+
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <div className='flex items-center'>
+                                    <button className='bg-orange-100 text-red font-medium py-2 px-6 rounded-md'>Sell on QuickStore for free</button>
+                                    <div className='ml-6'> 
+                                        <h2><span><CiShoppingCart className='inline-block mr-4' /></span>Cart <span className='text-red'>(0)</span></h2>
+                                    </div>
+
+                                </div>
+                        
+                            </div>
+                    
+
+                        </div>
+                
+            
+
+                    </div>
+           
+                </div>
+            </div>
+            
 
         </div>
         <div className='flex justify-evenly mx-20'>
             
                 <div className=' w-60 h-78 relative'>
+                   
                     <div className='bg-black/40 w-100 h-77 rounded-2xl'>
                         <img src={heel}alt="" className='w-100 h-77 mix-blend-overlay absolute rounded-2xl' />
 
@@ -76,13 +122,34 @@ const MarketPlace = () => {
 
             <div className=''>
             
-                    <div>
+                    <div> 
                         <div className='mx-24 grid grid-cols-4 gap-4'>
-                            <div className='w-full '>
-                                <img src={heels}className='w-full h-15 rounded-md ' alt="" />
-                                
-                            </div>
-                            <div className=''>
+                            <Link to="/AllProduct">
+                                <div className='w-full '>
+                                    <img src={heels}className='w-full h-15 rounded-md ' alt="" />
+                                    
+                                </div>
+                            </Link>
+                            <Link to="/AllProduct">
+                                <div className='w-full '>
+                                    <img src={heels}className='w-full h-15 rounded-md ' alt="" />
+                                    
+                                </div>
+                            </Link>
+                            <Link to="/AllProduct">
+                                <div className='w-full '>
+                                    <img src={heels}className='w-full h-15 rounded-md ' alt="" />
+                                    
+                                </div>
+                            </Link>
+                            <Link to="/AllProduct">
+                                <div className='w-full '>
+                                    <img src={heels}className='w-full h-15 rounded-md ' alt="" />
+                                    
+                                </div>
+                            </Link>
+                            
+                            {/* <div className=''>
                                 <img src={heels}className='w-full h-15 rounded-xl' alt="" />
                                 
                             </div>
@@ -93,7 +160,7 @@ const MarketPlace = () => {
                             <div className=''>
                                 <img src={heels}className='w-full h-15 rounded-xl' alt="" />
                                 
-                            </div>
+                            </div> */}
                             
                             
                            
@@ -105,9 +172,14 @@ const MarketPlace = () => {
             </div>
             
         </div>
-        <Product/>
+        
+            <Product type='Featured'/>
+
+        
+      
 
         <div className='bg-gradient-to-r from-wineRed to-darkRed h-60 my-48 mx-20 overflow-hidden'>
+            
             <div className='flex justify-between '>
                 <div className='py-10 px-6 '>
                     <h2 className='font-medium text-white text-3xl'>Free delivery on <br />all Lagos Orders</h2>
@@ -123,7 +195,7 @@ const MarketPlace = () => {
             </div>
             
         </div>
-        <Product title='More Product'/>
+        <Product type="More"/>
         <Subscribe/>
         <Footer/>
     </div>

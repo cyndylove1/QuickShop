@@ -2,14 +2,50 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import Subscribe from '../Subscribe/Subscribe'
+import { RxSlash } from "react-icons/rx";
+import { Link } from 'react-router-dom';
+// import image from '../../'
+
 
 const Contact = () => {
   return (
     <div>
         <Navbar/>
         <div className=''>
+            <div className='flex mx-20 '>
+                {/* <div>
+                    <h2>Home</h2>
+                </div> */}
+                <div className='flex items-center'>
+                    
+                    {/* <span className='inline-block'><RxSlash /></span>
+                    <div className='hover:text-red inline-block'>
+                        <Link to='/MarketPlace'>MarketPlace</Link>
 
-            <div className='flex justify-between mx-20 pt-48 '>
+                    </div> */}
+                    
+                    {/* <span className='inline-block'><RxSlash /></span>
+                    <div className='hover:text-red inline-block'>
+                        <Link to='/Blog'>Blog</Link>
+
+                    </div> */}
+                    {/* <span className='inline-block'><RxSlash /></span>
+                    <div className='hover:text-red inline-block'>
+                        <Link to='/Contact'>Contact</Link>
+
+                    </div> */}
+                    <span className='inline-block'><RxSlash /></span>
+                    <div className='hover:text-red inline-block'>
+                        <Link to='/AllProduct'>AllProduct</Link>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div className=''>
+
+            <div className='flex justify-between mx-20 pt-6 '>
                 <div className='pt-16'>
                     <h2 className='font-normal text-4xl'>Talk to our sales team</h2>
                     <p className='font-light text-sm py-2'>Do you have any questions for Quickshop regarding selling your <br /> products online? </p>
