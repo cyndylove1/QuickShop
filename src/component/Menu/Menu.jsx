@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { HiMiniTrash } from "react-icons/hi2";
-import {increase} from '../State/CartSlice'
 import { useState } from 'react';
 
 const Menu = ({item}) => {
@@ -28,12 +27,12 @@ const Menu = ({item}) => {
             <div className='flex-col items-start w-30'>
                 <div>{name}</div>
                 <div className='flex items-center gap-4 mt-2  border-1 border-gray rounded-2xl '>
-                    {/* <button type='button' className='w-10 h-8' onClick={handleDecrement}>-</button>
+                    <button type='button' className='w-10 h-8' onClick={handleDecrement}>-</button>
                       <div className='w-10 form-control text-center pt-1'>{quantity}</div>
-                      <button type='button' className='w-10'  onClick={handleIncrement}>+</button> */}
-                    <button type='button' className='w-10 h-8'>-</button>
+                      <button type='button' className='w-10'  onClick={handleIncrement}>+</button>
+                    {/* <button type='button' className='w-10 h-8'>-</button>
                       <div className='w-10 form-control text-center pt-1'>{amount}</div>
-                      <button type='button' className='w-10'>+</button>
+                      <button type='button' className='w-10'>+</button> */}
                     
                 </div>
             </div>

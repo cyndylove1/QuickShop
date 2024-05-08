@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import logo from '../Images/cN1g46Vw_400x400.png'
 import { FaFileUpload } from "react-icons/fa";
 import { IoStorefront } from "react-icons/io5";
@@ -6,8 +6,7 @@ import { GoCheckCircleFill } from "react-icons/go";
 
 
 const Upload2 = () => {
-    const[image , setImage] = useState(null)
-    const[fileName, setFileName] = useState('no selected file')
+   
   return (
     <div>
         <div className='flex justify-between'>
@@ -27,7 +26,7 @@ const Upload2 = () => {
                             <h2 className=' py-2 mx-3 text-sm font-medium'>LO</h2>
                         </div>
                         <div>
-                            <form className='border-1 border-gray w-60 p-10 mb-6 text-center rounded-lg' onClick={()=> document.querySelector(".input-field").click()}>
+                            <form className='border-1 border-gray w-60 p-10 mb-6 text-center rounded-lg'>
                                 
                                   
                                     <input type="file" id="upload" accept=".doc, .docx, .Pdf"  className='input-field' hidden />
@@ -37,12 +36,7 @@ const Upload2 = () => {
                                     </div>
                                    
                                 <p className='text-sm'><span className='text-red font-medium'>Click to Upload </span>or drag and drop <br /> Minimumm of 2MB required</p>
-                                {/* {
-                                    image ?
-                                    <img src={image} width={60} height={60} alt={fileName}/>
-                                    :
-                                    <FaFileUpload className='bg-amber w-6 h-6 rounded'/>
-                                } */}
+                                
                              
         
                             </form>

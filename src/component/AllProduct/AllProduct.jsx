@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState} from 'react'
 import { RxSlash } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import { IoIosArrowDown} from "react-icons/io"
@@ -6,9 +6,6 @@ import Footer from '../Footer/Footer';
 import { FaRegStar } from "react-icons/fa6";
 import { GoPerson } from "react-icons/go";
 import Data from '../Data'
-import { setIsCartOpen } from '../State/index';
-import { useDispatch, useSelector } from 'react-redux';
-// import { CiShoppingCart } from "react-icons/ci";
 import logo from '../Images/cN1g46Vw_400x400.png'
 import { IoSearchOutline } from "react-icons/io5";
 import { CiShoppingCart } from "react-icons/ci";
@@ -21,19 +18,10 @@ import Menu from '../Menu/Menu'
 
 const AllProduct = ({product}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)  
-    const cart = useSelector((state)=>state.cart.cart)
-    const dispatch = useDispatch()
-
-
-    const [openDrop, setOpendrop] = useState(false);
-    const [details, setDetails] = useState([]);
-    const [isChecked, setIsChecked] = useState(false);
-    const [products , setProducts] = useState(Data)
-    const [query, setQuery] = useState("");
+    const [products ] = useState(Data)
     const [visible, setVisible] = useState(5);
     const [hidden, setHidden] = useState("block");
-    const title = ["Categories", "Sub-Categories"];
-
+    
 
 
     // const HandleToCart = (item) => {
@@ -80,7 +68,7 @@ const AllProduct = ({product}) => {
                                     <button className='bg-orange-100 text-red font-medium py-2 px-6 rounded-md'>Sell on QuickShop</button>
                                     <div className='flex mx-10 cursor-pointer' onClick={()=> setIsMenuOpen(true)} >
                                         <Link to="/" className='relative'>
-                                            <CiShoppingCart size={20} onClick={()=> dispatch(setIsCartOpen({}))} />
+                                            <CiShoppingCart size={20}/>
                                    
                                         </Link>
                                         <div className='-mt-2 absolute mx-2 flex '>
@@ -307,7 +295,7 @@ const AllProduct = ({product}) => {
         <div className='grid grid-cols-3 gap-2 ml-20 '>
 
         {
-            products ?.slice(0, visible)?.map((product)=>{
+            products.slice(0, visible)?.map((product)=>{
            
                 return(
                      

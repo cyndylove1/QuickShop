@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import logo from '../Images/cN1g46Vw_400x400.png'
 import { IoStorefront } from "react-icons/io5";
 import { GoCheckCircleFill } from "react-icons/go";

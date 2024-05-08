@@ -11,54 +11,25 @@ import Footer from '../Footer/Footer';
 import { RxSlash } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import images from "../Images/images.jpeg"
-import Cart from '../Cart/Cart';
 import clsx from  'clsx';
 import { IoCloseOutline } from "react-icons/io5";
 import logo from '../Images/cN1g46Vw_400x400.png'
 import { IoSearchOutline } from "react-icons/io5";
 import { GoPerson } from "react-icons/go";
-import { setIsCartOpen } from '../State/index';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import Menu from '../Menu/Menu';
-import Data from '../Data'
 
 
-// import product from '../Product'
 
 const MarketPlace = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)  
-    const product = useSelector((state)=>state.cart)
-    const dispatch = useDispatch()
+    const Data = useSelector((state)=>state.cart)
 
- const [hidden, setHidden] = useState("block");
-  const [query, setQuery] = useState("");
-    const handleSearch = (e) => {
-        setQuery(e.target.value);
-    
-        if (e.target.value.length > 0) {
-          setHidden("hidden");
-        } else {
-          setHidden("block");
-        }
-      };
+
+  
   return (
     <div className=''>
-        {/* <div className=''>
-            <div className='flex mx-20 mt-6 '>
-                <div>
-                    <h2>Home</h2>
-                </div>
-                <div className='flex items-center'>
-                    <span className='inline-block'><RxSlash /></span>
-                    <div className='hover:text-red inline-block'>
-                        <Link to='/Merchant'>Merchant</Link>
-
-                    </div>
-                </div>
-
-            </div>
-        </div> */}
+        
          <div>
                 <div>
                     <div className=''>
@@ -83,7 +54,7 @@ const MarketPlace = () => {
                                     <button className='bg-orange-100 text-red font-medium py-2 px-6 rounded-md'>Sell on QuickShop</button>
                                     <div className='flex mx-10 cursor-pointer' onClick={()=> setIsMenuOpen(true)}>
                                         <Link to="/" className='relative'>
-                                            <CiShoppingCart size={20} onClick={()=> dispatch(setIsCartOpen({}))} />
+                                            <CiShoppingCart size={20}/>
                                    
                                         </Link>
                                         <div className='-mt-2 absolute mx-2 flex '>

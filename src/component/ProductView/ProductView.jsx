@@ -7,8 +7,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import logo from '../Images/cN1g46Vw_400x400.png'
 import { IoSearchOutline } from "react-icons/io5";
 import { RxSlash } from "react-icons/rx";
-import { IoIosArrowForward , IoIosArrowDown} from "react-icons/io";
-// import { setIsCartOpen } from '../State/index';
+import { IoIosArrowDown} from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../State/CartSlice';
 import clsx from  'clsx';
@@ -23,12 +22,6 @@ const ProductView = () => {
     const dispatch = useDispatch()
 
   const [quantity, setQuantity] = useState(1)
-  const [image, setImage] = useState({
-    // img1:'https://img.freepik.com/free-photo/collection-beauty-products-with-copy-space_23-2148620110.jpg?size=626&ext=jpg&ga=GA1.1.1707697249.1713828132&semt=ais',
-    // img2:'https://img.freepik.com/premium-photo/professional-makeup-tools-top-view-flat-lay-beauty-decorative-cosmetics-makeup-brushes-set-color-eyeshadow-palette-table-background-minimalistic-style_79075-33379.jpg?size=626&ext=jpg&ga=GA1.1.1707697249.1713828132&semt=ais',
-    // img3:'https://img.freepik.com/premium-photo/high-angle-view-multi-colored-pencils-table_1048944-18724314.jpg?size=626&ext=jpg&ga=GA1.1.1707697249.1713828132&semt=ais',
-    // img4:'https://img.freepik.com/premium-photo/mini-shopping-cart-with-cosmetics_121946-1232.jpg?size=626&ext=jpg&ga=GA1.1.1707697249.1713828132&semt=ais'
-  })
   const {productId} = useParams()
   console.log(productId)
   const product = Data.find((e)=>e.id === Number(productId))
