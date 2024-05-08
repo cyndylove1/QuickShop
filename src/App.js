@@ -66,7 +66,6 @@ function App() {
           <Route path="/Password" element={<Password/>}/>
           <Route path="/Registered" element={<Registered/>}/>
           <Route path="/Upload2" element={<Upload2/>}/>
-          <Route path="/Cart" element={<Cart/>}/>
           <Route path="/Menu" element={<Menu/>}/>
           <Route path="/DashBoard" element={<DashBoard/>}/>
           <Route path="/SideBar" element={<SideBar/>}/>
