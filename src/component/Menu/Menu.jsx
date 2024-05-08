@@ -33,7 +33,7 @@ const Menu = ({item}) => {
                       <button type='button' className='w-10'  onClick={handleIncrement}>+</button> */}
                     <button type='button' className='w-10 h-8'>-</button>
                       <div className='w-10 form-control text-center pt-1'>{amount}</div>
-                      <button type='button' className='w-10' onClick={()=> dispatch(increase(item))}>+</button>
+                      <button type='button' className='w-10'>+</button>
                     
                 </div>
             </div>
