@@ -5,6 +5,7 @@ import Subscribe from '../Subscribe/Subscribe'
 import Footer from '../Footer/Footer'
 import slider from '../Images/binh-ly-k_4A59MzZTY-unsplash.jpg'
 import slide from '../Images/Merchant Colorful Shape - Homepage (4).png'
+import slide2 from '../Images/Buyer Colorful Pill - Homepage.png'
 import Marquee from "react-fast-marquee";
 import { GiStarShuriken } from "react-icons/gi";
 import Navbar from '../Navbar/Navbar';
@@ -253,7 +254,7 @@ const Home = () => {
 
                                     </div>
                                     <div className='absolute -mt-36 ml-40 '>
-                                        <img src={slide} alt="" className='ml-37 w-99' />
+                                        <img src={slide2} alt="" className='ml-37 w-99' />
                                     </div>
                                             
                                 </div>
@@ -311,7 +312,7 @@ const Home = () => {
 
                                     </div>
                                     <div className='absolute -mt-36 ml-40 '>
-                                        <img src={slide} alt="" className='ml-37 w-99' />
+                                        <img src={slide2} alt="" className='ml-37 w-99' />
                                     </div>
                                             
                                 </div>

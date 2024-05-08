@@ -1,7 +1,5 @@
 import React from 'react'
 import { CiShoppingCart } from "react-icons/ci";
-import logo from '../Images/cN1g46Vw_400x400.png'
-import { IoSearchOutline } from "react-icons/io5";
 import heel from '../Images/pexels-skylar-kang-6046209.jpg'
 import shoe from '../Images/pexels-bhine-4314204.jpg'
 import heels from '../Images/pexels-gabby-k-7691385.jpg'
@@ -14,12 +12,26 @@ import { RxSlash } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import images from "../Images/images.jpeg"
+import Cart from '../Cart/Cart';
+import clsx from  'clsx';
+import { IoCloseOutline } from "react-icons/io5";
+import logo from '../Images/cN1g46Vw_400x400.png'
+import { IoSearchOutline } from "react-icons/io5";
+import { GoPerson } from "react-icons/go";
+import { setIsCartOpen } from '../State/index';
+import { useDispatch, useSelector } from 'react-redux';
+import Menu from '../Menu/Menu';
+import Data from '../Data'
 
 
 // import product from '../Product'
 
 const MarketPlace = () => {
-const [hidden, setHidden] = useState("block");
+    const [isMenuOpen, setIsMenuOpen] = useState(false)  
+    const product = useSelector((state)=>state.cart)
+    const dispatch = useDispatch()
+
+ const [hidden, setHidden] = useState("block");
   const [query, setQuery] = useState("");
     const handleSearch = (e) => {
         setQuery(e.target.value);
@@ -32,7 +44,7 @@ const [hidden, setHidden] = useState("block");
       };
   return (
     <div className=''>
-        <div className=''>
+        {/* <div className=''>
             <div className='flex mx-20 mt-6 '>
                 <div>
                     <h2>Home</h2>
@@ -46,21 +58,19 @@ const [hidden, setHidden] = useState("block");
                 </div>
 
             </div>
-        </div>
-        
-        <div>
-            <div>
+        </div> */}
+         <div>
                 <div>
                     <div className=''>
-                        <div className='flex justify-between items-center justify-center mx-20 my-6'>
+                        <div className='flex justify-between items-center mx-20 my-6'>
 
                             <div className=''>
-                                <div className='flex items-center '>
-                                    <img src={logo} alt="" className='w-10 inline-block'/><h2 className='inline-block text-2xl font-bold'>Quick<span className='text-red'>Shop</span></h2>
+                                <div className='flex items-center  '>
+                                    <img src={logo} alt="" className='w-10 inline-block '/><h2 className='inline-block text-2xl font-bold'>Quick<span className='text-red'>Shop</span></h2>
 
                                     <div className='mx-10 h-12 relative flex items-center focus-within:text-black '>
                                         <IoSearchOutline  className='absolute ml-4 pointer-events-none'/>
-                                        <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32  outline-none' placeholder='Search for any Product' onChange={(e)=> handleSearch(e)} />
+                                        <input type="text" className='pl-10 h-10 w-100 border-2 border-gray rounded-md px-32  outline-none' placeholder='Search for any Product'/>
                                     
                                
                                      </div>  
@@ -68,14 +78,48 @@ const [hidden, setHidden] = useState("block");
                                 </div>
                                 
                             </div>
-                            <div>
-                                <div className='flex items-center'>
-                                    <button className='bg-orange-100 text-red font-medium py-2 px-6 rounded-md'>Sell on QuickStore for free</button>
-                                    <div className='ml-6'> 
-                                        <h2><span><CiShoppingCart className='inline-block mr-4' /></span>Cart <span className='text-red'>(0)</span></h2>
+                            <div className=''>
+                                <div className='flex items-center ml-10'>
+                                    <button className='bg-orange-100 text-red font-medium py-2 px-6 rounded-md'>Sell on QuickShop</button>
+                                    <div className='flex mx-10 cursor-pointer' onClick={()=> setIsMenuOpen(true)}>
+                                        <Link to="/" className='relative'>
+                                            <CiShoppingCart size={20} onClick={()=> dispatch(setIsCartOpen({}))} />
+                                   
+                                        </Link>
+                                        <div className='-mt-2 absolute mx-2 flex '>
+                                   
+                                            <p className='bg-red flex items-center justify-center w-4 h-4 rounded-full inline-block '><span className='p-2 text-xs text-white font-medium'></span></p>
+                                            
+                                            <div className=''>
+                                                <h2 className='text-sm pt-2 '>Cart</h2>
+
+                                            </div>
+                                    
+                                    
+                                        </div>
+                                        
+                        
+                                
+
+                                
+                             
                                     </div>
+                                    <div className='flex mx-10'>
+                                        <h2 className=''><GoPerson size={20} /></h2>
+                                        <div className=''>
+                                            <h3 className='text-sm'>Account</h3>
+                                
+
+                                        </div>
+                                       
+                                
+                                
+                                    </div>
+                                    
+                                    
 
                                 </div>
+                                
                         
                             </div>
                     
@@ -89,8 +133,9 @@ const [hidden, setHidden] = useState("block");
                 </div>
             </div>
             
-
-        </div>
+        
+        {/* <Navbar2/> */}
+        
         <div className='flex justify-evenly mx-20'>
             
                 <div className=' w-60 h-78 relative'>
@@ -198,6 +243,50 @@ const [hidden, setHidden] = useState("block");
         <Product type="More"/>
         <Subscribe/>
         <Footer/>
+        <div className={clsx('fixed bg-black/10 t  transition-all backdrop-blur-sm top-0 right-0 w-full h-full -translate-x-full', isMenuOpen && 'translate-x-0')}>
+            <div className='text-black bg-white absolute right-0 top-0 h-screen w-30 z-50 flex justify-between '>
+                <div className='flex'>
+                    <div>
+                        Home <span className='inline-block'><RxSlash/></span>
+                    </div>
+                    <div>
+                        <h2 className='text-red'>Cart</h2>
+                    </div> 
+                    {/* <div className='text-red'>{product.name}</div> */}
+                
+                </div>
+                {/* <div>
+                    <h4 className='text-2xl text-black'>Your Cart</h4>
+                </div> */}
+                <div className=''>
+                    <IoCloseOutline onClick={()=>setIsMenuOpen(false)} className='text-2xl'/>
+                    
+
+                </div>
+                
+            </div>
+        </div>
+        <div>
+            {
+                Data.length === 0 ? (
+                    <div>
+                        <h2>Your Cart is Empty</h2>
+                        <button>Shop Now</button>
+                    </div>
+                ):(
+                    <div>
+                        {Data.map((item)=>{
+                            return(
+                                <Menu key={item.id} 
+                                item = {item}/>
+                            )
+                        })}
+
+                    </div>
+            )}
+        </div>
+
+        
     </div>
   )
 }
