@@ -1,5 +1,7 @@
 import React from 'react'
 import logo from '../Images/cN1g46Vw_400x400.png'
+import { LuLayoutDashboard } from "react-icons/lu";
+import { CiSettings } from "react-icons/ci";
 
 const SideBar = () => {
   return (
@@ -10,8 +12,59 @@ const SideBar = () => {
 
             </div>
             <div>
-                <li>DashBoard</li>
+                <div className='flex items-center'>
+                    <div>
+                        <h2 className='mx-2'><LuLayoutDashboard /></h2>
+                    </div>
+                    <div className='list-none'>
+                        <li>DashBoard</li>
+
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                    <div>
+                        <h2 className='mx-2'><LuLayoutDashboard /></h2>
+                    </div>
+                    <div className='list-none'>
+                        <li>DashBoard</li>
+
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                    <div>
+                        <h2 className='mx-2'><LuLayoutDashboard /></h2>
+                    </div>
+                    <div className='list-none'>
+                        <li>DashBoard</li>
+
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                    <div>
+                        <h2 className='mx-2'><LuLayoutDashboard /></h2>
+                    </div>
+                    <div className='list-none'>
+                        <li>DashBoard</li>
+
+                    </div>
+                    
+                </div>
+                <div className='flex items-center'>
+                    <div>
+                        <h2 className='mx-2'><CiSettings /></h2>
+                    </div>
+                    <div className='list-none'>
+                        <li>DashBoard</li>
+
+                    </div>
+                    
+                </div>
+
             </div>
+            
         </div>
     </div>
   )
