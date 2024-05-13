@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { HiMiniTrash } from "react-icons/hi2";
 import { useState } from 'react';
 
@@ -16,7 +16,7 @@ const Menu = ({item}) => {
     }
 
     const {amount} = useSelector((state)=>state.cart)
-    const dispatch = useDispatch()
+
     const {id,name, Price,image} = item
   return (
     <div>
